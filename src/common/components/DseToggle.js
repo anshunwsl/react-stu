@@ -13,6 +13,8 @@ export class DseToggle extends React.Component {
         };
         //
         this.handleItemClick = this.handleItemClick.bind(this);
+
+
     }
 
     //

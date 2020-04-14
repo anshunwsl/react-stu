@@ -22,6 +22,28 @@ function sortSearch(data, keyField) {
 // 二分查找
 //
 
+function binarySearch(data = [], dest) {
+    //
+    let start = 0;
+    let end = data.length - 1;
+    while (start <= end) {
+        //
+        let middle = Math.floor((end + 1) / 2);
+        if (data[middle] === dest) {
+            //
+            return data[middle];
+        }
+        //
+        if (data[middle] > dest) {
+            //
+            end = middle - 1;
+        } else {
+            start = middle + 1;
+        }
+    }
+    //
+    return -1;
+}
 
 let data = [22, 33, 454, 2132, 786, 99, 332, 1233, 34, 1, 2, 4, 98];
 
@@ -33,4 +55,14 @@ console.log(`search data is ${result}`);
 
 
 /// 二分法查找.
+data.sort((a,b)=>{
+    //
+    return a-b;
+});
+
+
+result=binarySearch(data,98);
+
+
+console.log(`binary search data is ${result}`);
 

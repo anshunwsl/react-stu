@@ -14,6 +14,7 @@ import {SelectControl} from "./common/components/SelectControl";
 import {Container} from "./common/components/Container";
 import {SplitPanel} from "./common/components/SplitPanel";
 import {WelComeDialog} from "./common/components/WelComeDialog";
+import {ThemeButton} from "./common/components/ThemeButton";
 
 function App() {
     return (
@@ -40,6 +41,8 @@ function App() {
                     right={<FormWidget/>}/>
 
                 <WelComeDialog/>
+
+                <ThemeButton/>
 
             </header>
         </div>

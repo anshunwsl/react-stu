@@ -11,7 +11,8 @@ function xhr(data) {
     xhrObject.setRequestHeader("content-type", "application/json");
     xhrObject.onreadystatechange = function () {
         //
-        if (xhrObject.readyState === 4) {
+        //
+        if (xhrObject.readyState === XMLHttpRequest.DONE&&xhrObject.status===200) {
             //请求成功.
             //处理结果
             let data = xhrObject.responseText;

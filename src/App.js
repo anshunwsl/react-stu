@@ -1,51 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {User} from "./common/User.js";
-import {DseMap} from "./common/components/DseMap";
-import {DseToggle} from "./common/components/DseToggle";
-
 // import "bulma/bulma.sass";
 import "bulma/css/bulma.min.css";
-import {NumberList} from "./common/components/NumberList";
-import {FormWidget} from "./common/components/FormWidget";
-import {NameForm} from "./common/components/NameForm";
-import {SelectControl} from "./common/components/SelectControl";
-import {Container} from "./common/components/Container";
-import {SplitPanel} from "./common/components/SplitPanel";
-import {WelComeDialog} from "./common/components/WelComeDialog";
 import {ThemeButton} from "./common/components/ThemeButton";
+
+import {HashRouter, Route} from "react-router-dom";
+
+import UserList from "./common/components/UserList";
+import User from "./common/components/User";
+import Login from "./common/components/Login";
+
+//
+
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
+        <HashRouter>
+            <Route path="/" component={Login}>
+                <Route path="about" component={ThemeButton}/>
 
-                <User name="wangsl" content="userdddd"/>
+                <Route path="/users" component={UserList}>
 
-                <DseToggle toggleName="Toggle Button"/>
-
-                <DseMap/>
-
-                <NumberList items={[{id: "ttt", name: "item1"}, {id: "ttt1", name: "dddd"}]}/>
-
-                <NameForm/>
-
-                <Container>
-                    <h1>nihaoma</h1>
-                    <p>diu</p>
-                </Container>
-
-                <SplitPanel
-                    left={<SelectControl/>}
-                    right={<FormWidget/>}/>
-
-                <WelComeDialog/>
-
-                <ThemeButton/>
-
-            </header>
-        </div>
+                    <Route path="/user/:userId" component={User}/>
+                </Route>
+                {/*<Route path="/" component={NameForm}/>*/}
+            </Route>
+        </HashRouter>
     );
 }
 

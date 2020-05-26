@@ -4,6 +4,24 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+//
+import  {observable,autorun} from "mobx";
+
+//
+let user=observable({
+    //
+    name:"wangsl",
+    id:"001"
+});
+//
+autorun(()=>{
+    //
+    console.log(`user data is  ${JSON.stringify(user)}`);
+});
+//
+
+user.name="wangshanglang";
+
 ReactDOM.render(
   <React.StrictMode>
     <App />

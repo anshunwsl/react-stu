@@ -4,6 +4,13 @@ class User extends React.Component {
     //
     constructor(props) {
         super(props);
+        //
+        this.state={
+            user:{
+                name:"user001",
+                id:"tet001"
+            }
+        };
     }
 
     componentDidMount() {

@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-
     "bulma": "^0.8.1",
     "cross-env": "^7.0.2",
     "lodash": "^4.7.15",
@@ -14,15 +13,14 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
-
-
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "@types/react-router-dom": "^5.1.5"
+    "@types/react-router-dom": "^5.1.5",
+    "create-react-class": "^15.6.3",
+    "prop-types": "^15.7.2"
   },
-
   "scripts": {
     "start": "cross-env PORT=8094 react-scripts start",
     "build": "react-scripts build",

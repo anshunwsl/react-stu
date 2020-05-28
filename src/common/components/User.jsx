@@ -1,14 +1,16 @@
 import React from "react";
+import Post from "./nojsx/Post";
+import Es5User from "./nojsx/ES5User";
 
 class User extends React.Component {
     //
     constructor(props) {
         super(props);
         //
-        this.state={
-            user:{
-                name:"user001",
-                id:"tet001"
+        this.state = {
+            user: {
+                name: "user001",
+                id: "tet001"
             }
         };
     }
@@ -29,6 +31,10 @@ class User extends React.Component {
         return (
             <div>
                 <h1>{this.state.user.name}</h1>
+
+                <Post name="wsl" items={[1,1,2]}/>
+
+                <Es5User name="wangshanglang....."/>
             </div>
         );
     }
